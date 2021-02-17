@@ -1,11 +1,14 @@
 import React from "react";
-import styled from "styled-components";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import { Button } from "@material-ui/core";
 
-const HeroButton = () => {
+const HeroButton = (props) => {
   return (
-    <Button color="secondary" variant="contained" startIcon={<PlayArrowIcon />}>
+    <Button
+      color="primary"
+      variant="contained"
+      startIcon={<PlayArrowIcon style={{ fontSize: 50 }} />}
+    >
       SUSCRIBITE
     </Button>
   );
