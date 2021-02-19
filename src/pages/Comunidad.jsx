@@ -1,14 +1,18 @@
 import { Card, CardContent, Grid, Paper, Typography } from "@material-ui/core";
+import YoutubeCard from "../components/YoutubeCard";
 import React from "react";
 import styled from "styled-components";
+
+const Wrapper = styled.div`
+  height: 100vh;
+`;
+
 const Texto = styled.h2`
   color: #e9e9e9;
   font-size: 1em;
   font-weight: bold;
 `;
-const Wrapper = styled.div`
-  height: 100vh;
-`;
+
 const Comunidad = () => {
   return (
     <Wrapper>
@@ -21,11 +25,7 @@ const Comunidad = () => {
         spacing={3}
       >
         <Grid item xs={12}>
-          <Card style={{ backgroundColor: "#232323" }}>
-            <CardContent>
-              <Texto>125152 suscriptores</Texto>
-            </CardContent>
-          </Card>
+          <YoutubeCard />
         </Grid>
         <Grid item xs={12}>
           <Card style={{ backgroundColor: "#232323" }}>
