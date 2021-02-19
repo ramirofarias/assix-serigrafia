@@ -6,8 +6,6 @@ import Navbar from "./components/Navbar";
 import Comunidad from "./pages/Comunidad";
 
 const App = () => {
-  fetch();
-
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
