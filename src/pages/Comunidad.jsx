@@ -1,52 +1,73 @@
-import { Card, CardContent, Grid, Paper, Typography } from "@material-ui/core";
-import YoutubeCard from "../components/YoutubeCard";
-import React from "react";
-import styled from "styled-components";
+import { Card, CardContent, Grid } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import CountUp from "react-countup";
 
-const Wrapper = styled.div`
-  height: 100vh;
-`;
-
-const Texto = styled.h2`
-  color: #e9e9e9;
-  font-size: 1em;
-  font-weight: bold;
-`;
+import "./Comunidad.css";
 
 const Comunidad = () => {
+  const YOUTUBE_API = process.env.REACT_APP_YOUTUBE_API_KEY;
+  const CHANNEL_ID = "UCr4Lrxwu3Sm3yNtf37cI7tg";
+
+  const [subscriberCount, setSubscriberCount] = useState(0);
+  const [videoCount, setVideosCount] = useState(0);
+  const [viewCount, setViewCount] = useState(0);
+
+  useEffect(() => {
+    const fetchSubs = async () => {
+      const API_URL = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${YOUTUBE_API}`;
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      const subs = parseInt(data.items[0].statistics.subscriberCount);
+      const views = parseInt(data.items[0].statistics.viewCount);
+      const videos = parseInt(data.items[0].statistics.videoCount);
+
+      setVideosCount(videos);
+      setViewCount(views);
+      setSubscriberCount(subs);
+      console.log(data);
+    };
+    fetchSubs();
+  }, []);
+
   return (
-    <Wrapper>
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-        style={{ height: "100vh", backgroundColor: "#e9e9e9" }}
-        spacing={3}
-      >
-        <Grid item xs={12}>
-          <YoutubeCard />
-        </Grid>
-        <Grid item xs={12}>
-          <Card style={{ backgroundColor: "#232323" }}>
-            <CardContent>
-              <Texto>125152 suscriptores</Texto>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12}>
-          <Card
-            elevation={3}
-            color="primary"
-            style={{ backgroundColor: "#232323" }}
-          >
-            <CardContent>
-              <Texto>125152 suscriptores</Texto>
-            </CardContent>
-          </Card>
-        </Grid>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="center"
+      style={{ height: "50vh" }}
+    >
+      <Grid item>
+        <Card style={{ backgroundColor: "#232323" }} id="subscriberCount">
+          <CardContent>
+            <h2>
+              <CountUp end={subscriberCount} />
+            </h2>
+            <h2>suscriptores</h2>
+          </CardContent>
+        </Card>
       </Grid>
-    </Wrapper>
+      <Grid item>
+        <Card style={{ backgroundColor: "#232323" }} id="videosCount">
+          <CardContent>
+            <h2>
+              <CountUp end={videoCount} />
+            </h2>
+            <h2>videos</h2>
+          </CardContent>
+        </Card>
+      </Grid>
+      <Grid item>
+        <Card style={{ backgroundColor: "#232323" }} id="viewsCount">
+          <CardContent>
+            <h2>
+              <CountUp end={viewCount} />
+            </h2>
+            <h2>visualizaciones</h2>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
   );
 };
 
