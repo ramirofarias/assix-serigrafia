@@ -4,6 +4,7 @@ import React from "react";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
 import Comunidad from "./pages/Comunidad";
+import UltimosVideos from "./pages/UltimosVideos";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <Homepage />
       <Comunidad />
+      <UltimosVideos />
     </ThemeProvider>
   );
 };
