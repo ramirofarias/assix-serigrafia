@@ -1,16 +1,28 @@
 import React from "react";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import { Button } from "@material-ui/core";
+import styled from "styled-components";
 
-const HeroButton = (props) => {
+const Link = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
+const HeroButton = () => {
   return (
-    <Button
-      color="primary"
-      variant="contained"
-      startIcon={<PlayArrowIcon style={{ fontSize: 50 }} />}
+    <Link
+      href="https://www.youtube.com/user/AlanSebas600?sub_confirmation=1"
+      target="_blank"
+      rel="noreferrer"
     >
-      SUSCRIBITE
-    </Button>
+      <Button
+        color="primary"
+        variant="contained"
+        startIcon={<PlayArrowIcon style={{ fontSize: 50 }} />}
+      >
+        SUSCRIBITE
+      </Button>
+    </Link>
   );
 };
 

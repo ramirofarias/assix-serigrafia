@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import "./Homepage.css";
 import { Box, Grid } from "@material-ui/core";
+import Navbar from "../components/Navbar";
 
 const Titulo = styled.h1`
   font-size: 2.5em;
@@ -18,6 +19,7 @@ const Texto = styled.p`
 const Homepage = () => {
   return (
     <div className="wrapper">
+      <Navbar />
       <div className="hero">
         <Grid
           container

@@ -3,16 +3,17 @@ import theme from "./theme";
 import React from "react";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
-import Comunidad from "./pages/Comunidad";
+import Canal from "./pages/Canal";
 import UltimosVideos from "./pages/UltimosVideos";
+import Comunidad from "pages/Comunidad";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
       <Homepage />
-      <Comunidad />
+      <Canal />
       <UltimosVideos />
+      <Comunidad />
     </ThemeProvider>
   );
 };
