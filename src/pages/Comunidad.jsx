@@ -62,7 +62,7 @@ const Comunidad = () => {
               title="Canal de Telegram"
             />
             <CardContent>
-              <h4>Canal de Telegram</h4>
+              <Typography variant="body2">Canal de Telegram</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -76,7 +76,7 @@ const Comunidad = () => {
               title="Grupo de Facebook"
             />
             <CardContent>
-              <h4>Grupo de Facebook</h4>
+              <Typography variant="body2">Grupo de Facebook</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -90,7 +90,7 @@ const Comunidad = () => {
               title="Perfil en Instagram"
             />
             <CardContent>
-              <h4>Perfil en Instagram</h4>
+              <Typography variant="body2">Perfil en Instagram</Typography>
             </CardContent>
           </Card>
         </Grid>

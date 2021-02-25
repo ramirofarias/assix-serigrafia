@@ -35,10 +35,10 @@ const Homepage = () => {
             <div className="hero--text">
               <Typography variant="h1">ASSIX! </Typography>
               <Typography variant="subtitle1">TALLER DE SERIGRAFÍA</Typography>
-              <Typography variant="body1">
+              <Typography variant={matches ? "body1" : "subtitle2"}>
                 Aprende estampado textil con videotutoriales en español.
               </Typography>
-              <Typography variant="body1">
+              <Typography variant={matches ? "body1" : "subtitle2"}>
                 Resuelve todas tus dudas en nuestra comunidad.
               </Typography>
             </div>

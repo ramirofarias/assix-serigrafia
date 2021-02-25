@@ -1,7 +1,9 @@
 body {
   margin: 0;
-  font-family: "Raleway" !important;
+  width: 100%;
   font-size: 24px;
+  box-sizing: border-box;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
