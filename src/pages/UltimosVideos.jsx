@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import videosBg from "./img/videosBg.svg";
@@ -29,6 +29,7 @@ const UltimosVideos = () => {
         `https://youtube.googleapis.com/youtube/v3/search?channelId=UCr4Lrxwu3Sm3yNtf37cI7tg&maxResults=4&order=date&type=video&key=${APIKEY}`
       );
       const data = await response.json();
+      console.log(data);
       const videosList = data.items.map(
         (obj) => "http://www.youtube.com/embed/" + obj.id.videoId
       );
@@ -68,7 +69,7 @@ const UltimosVideos = () => {
     >
       <div className="videos">
         <Grid item>
-          <h2>ÚLTIMOS VIDEOS</h2>
+          <Typography variant="h2">ÚLTIMOS VIDEOS</Typography>
         </Grid>
         <Grid item xs={12}>
           <EmbedWrapper>

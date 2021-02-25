@@ -1,6 +1,6 @@
 import React from "react";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import styled from "styled-components";
 
 const Link = styled.a`
@@ -19,8 +19,11 @@ const HeroButton = () => {
         color="primary"
         variant="contained"
         startIcon={<PlayArrowIcon style={{ fontSize: 50 }} />}
+        style={{ padding: "0rem 1.5rem", marginTop: "1.5rem" }}
       >
-        SUSCRIBITE
+        <Typography variant="body2" style={{ fontStyle: "normal" }}>
+          Suscribite
+        </Typography>
       </Button>
     </Link>
   );

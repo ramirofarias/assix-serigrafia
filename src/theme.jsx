@@ -1,6 +1,38 @@
-import { createMuiTheme } from "@material-ui/core";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
 
-export const theme = createMuiTheme({
+export let theme = createMuiTheme({
+  typography: {
+    fontFamily: "Bebas Kai",
+    h1: {
+      fontFamily: "Bebas Kai",
+      fontStyle: "italic",
+    },
+
+    subtitle1: {
+      color: "primary",
+      fontSize: "3rem",
+      fontWeight: "lighter",
+      fontStyle: "italic",
+    },
+
+    subtitle2: {
+      fontFamily: "Raleway",
+      fontSize: "1.5rem",
+      fontWeight: "lighter",
+    },
+
+    body1: {
+      fontFamily: "Raleway",
+      fontWeight: "lighter",
+      fontSize: "2rem",
+    },
+
+    body2: {
+      color: "#e9e9e9",
+      fontSize: "2rem",
+      textAlign: "center",
+    },
+  },
   palette: {
     primary: {
       main: "#f00",
@@ -20,5 +52,7 @@ export const theme = createMuiTheme({
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;

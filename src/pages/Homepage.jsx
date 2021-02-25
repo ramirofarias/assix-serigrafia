@@ -2,7 +2,7 @@ import HeroButton from "../components/HeroButton";
 import React from "react";
 import styled from "styled-components";
 import "./Homepage.css";
-import { Grid, useMediaQuery, useTheme } from "@material-ui/core";
+import { Grid, Typography, useMediaQuery, useTheme } from "@material-ui/core";
 import Navbar from "../components/Navbar";
 
 const Titulo = styled.h1`
@@ -33,11 +33,14 @@ const Homepage = () => {
         >
           <Grid item className="hero--wrapper" xs={12} color={"primary"}>
             <div className="hero--text">
-              <Titulo>TALLER DE SERIGRAFÍA</Titulo>
-              <Texto>
+              <Typography variant="h1">ASSIX! </Typography>
+              <Typography variant="subtitle1">TALLER DE SERIGRAFÍA</Typography>
+              <Typography variant="body1">
                 Aprende estampado textil con videotutoriales en español.
-              </Texto>
-              <Texto>Resuelve todas tus dudas en nuestra comunidad.</Texto>
+              </Typography>
+              <Typography variant="body1">
+                Resuelve todas tus dudas en nuestra comunidad.
+              </Typography>
             </div>
 
             <HeroButton />

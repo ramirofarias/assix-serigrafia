@@ -11,7 +11,6 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Homepage />
       <Canal />
-      <UltimosVideos />
       <Comunidad />
     </ThemeProvider>
   );

@@ -4,6 +4,7 @@ import {
   CardContent,
   CardMedia,
   Grid,
+  Typography,
 } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
@@ -14,9 +15,10 @@ import Instagram from "./img/instagram.png";
 const Titulo = styled.h2`
   color: #232323;
 `;
-const Texto = styled.p`
+const Texto = styled.li`
   color: #232323;
   font-weight: regular;
+  list-style-type: none;
 `;
 
 const Comunidad = () => {
@@ -25,19 +27,31 @@ const Comunidad = () => {
       container
       direction="row"
       alignItems="center"
-      style={{ height: "100vh" }}
+      style={{ height: "100%", padding: "3rem", backgroundColor: "#e9e9e9" }}
     >
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid item>
-          <Titulo>COMUNIDAD</Titulo>
+          <Typography variant="h2" style={{ color: "#232323" }}>
+            COMUNIDAD
+          </Typography>
         </Grid>
         <Grid item>
-          <Texto>🤔 Resolvé todas tus dudas,</Texto>
-          <Texto>👕 Compartí tus creaciones,</Texto>
-          <Texto>🤙 Y mucho más!</Texto>
+          <Typography variant="subtitle2">
+            🤔 Resolvé todas tus dudas,
+          </Typography>
+          <Typography variant="subtitle2">
+            👕 Compartí tus creaciones,
+          </Typography>
+          <Typography variant="subtitle2">🤙 Y mucho más!</Typography>
         </Grid>
       </Grid>
-      <Grid container direction="row" justify="center">
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        spacing={5}
+        style={{ marginTop: "1em" }}
+      >
         <Grid item>
           <Card style={{ backgroundColor: "#232323" }} className="card">
             <CardMedia
