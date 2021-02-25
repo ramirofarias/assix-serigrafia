@@ -34,7 +34,7 @@ const Canal = () => {
       direction="row"
       justify="center"
       alignItems="center"
-      style={{ height: "80vh", backgroundColor: "#e9e9e9" }}
+      style={{ backgroundColor: "#e9e9e9", padding: "3em 0" }}
     >
       <Grid item>
         <Card

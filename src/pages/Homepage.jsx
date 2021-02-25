@@ -2,7 +2,7 @@ import HeroButton from "../components/HeroButton";
 import React from "react";
 import styled from "styled-components";
 import "./Homepage.css";
-import { Box, Grid } from "@material-ui/core";
+import { Grid, useMediaQuery, useTheme } from "@material-ui/core";
 import Navbar from "../components/Navbar";
 
 const Titulo = styled.h1`
@@ -17,18 +17,21 @@ const Texto = styled.p`
 `;
 
 const Homepage = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
     <div className="wrapper">
       <Navbar />
       <div className="hero">
         <Grid
           container
-          direction="column"
+          direction={matches ? "column" : "row"}
           justify="center"
-          alignItems="flex-end"
+          alignItems={matches ? "flex-end" : "center"}
           style={{ height: "100vh" }}
         >
-          <Grid item xs={5} style={{ marginRight: "1em" }} color={"primary"}>
+          <Grid item className="hero--wrapper" xs={12} color={"primary"}>
             <div className="hero--text">
               <Titulo>TALLER DE SERIGRAFÍA</Titulo>
               <Texto>

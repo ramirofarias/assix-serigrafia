@@ -1,0 +1,4 @@
+.videos--wrapper {
+  background: url("./img/videosBg.svg") no-repeat;
+  background-size: cover;
+}

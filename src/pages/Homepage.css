@@ -1,7 +1,30 @@
-.wrapper {
-  background: url("./img/bg.svg") no-repeat;
-  background-size: cover;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
+@media (min-width: 300px) {
+  .wrapper {
+    background: url("./img/responsiveBg.svg") no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .hero--wrapper {
+    align-items: flex-start;
+    color: #e3e3e3;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .wrapper {
+    background: url("./img/bg.svg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    color: #232323;
+  }
+  .hero--wrapper {
+    color: #232323;
+    font-size: 1em;
+    text-align: left;
+  }
 }

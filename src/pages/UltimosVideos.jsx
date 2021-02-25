@@ -1,7 +1,24 @@
 import { Grid } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import videosBg from "./img/videosBg.svg";
+import "./UltimosVideos.css";
 
 const APIKEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+
+const EmbedWrapper = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 const UltimosVideos = () => {
   const [videos, setVideos] = useState([]);
@@ -27,8 +44,6 @@ const UltimosVideos = () => {
       <Grid item style={{ margin: "1em" }}>
         <iframe
           src={videos[i]}
-          width="auto"
-          height="100%"
           title="asdasd"
           frameBorder="0"
           allowFullScreen
@@ -40,24 +55,33 @@ const UltimosVideos = () => {
   return (
     <Grid
       container
+      className="videos--wrapper"
       direction="row"
       justify="center"
       alignItems="center"
-      style={{ backgroundColor: "#232323", height: "100%" }}
+      style={{
+        backgroundColor: "#232323",
+        height: "100%",
+        width: "100vw",
+        padding: "2em",
+      }}
     >
       <div className="videos">
         <Grid item>
           <h2>ÚLTIMOS VIDEOS</h2>
         </Grid>
         <Grid item xs={12}>
-          <iframe
-            src={videos[0]}
-            width="1280"
-            height="720"
-            title="asdasd"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
+          <EmbedWrapper>
+            <iframe
+              className="ultimoVideo"
+              src={videos[0]}
+              width="100%"
+              height="auto"
+              frameBorder="0"
+              allowFullScreen
+              title="Último video"
+            ></iframe>
+          </EmbedWrapper>
         </Grid>
         <Grid container direction="row" justify="center" alignItems="center">
           {smallVideos}
