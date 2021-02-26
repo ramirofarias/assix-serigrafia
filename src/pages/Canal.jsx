@@ -35,7 +35,7 @@ const Canal = () => {
       justify="center"
       alignItems="center"
       spacing={5}
-      style={{ height: "100%", padding: "3em " }}
+      style={{ padding: "3em " }}
     >
       <Grid
         container

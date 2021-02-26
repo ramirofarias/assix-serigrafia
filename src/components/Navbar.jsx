@@ -6,11 +6,11 @@ import assixLogo from "../pages/img/logo.png";
 const NavbarContainer = styled.div`
   width: 100%;
   height: 60px;
-  display: flex;
-  padding: 1em 1.5em;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   background-color: transparent;
-  justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 `;
 
 const LogoContainer = styled.div`
@@ -30,6 +30,7 @@ const LinksContainer = styled.div`
   display: flex;
   align-items: center;
   align-self: flex-end;
+  grid-column: 8/12; ;
 `;
 
 const LinksWrapper = styled.ul`
@@ -48,6 +49,10 @@ const LinkItem = styled.li`
 const Link = styled.a`
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    font-weight: bolder;
+  }
 `;
 
 const Navbar = () => {

@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 
 const Homepage = () => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className="wrapper">
@@ -14,9 +14,9 @@ const Homepage = () => {
       <div className="hero">
         <Grid
           container
-          direction={matches ? "column" : "row"}
-          alignItems={matches ? "flex-end" : "center"}
-          style={{ height: "100vh", padding: "2em" }}
+          direction={matches ? "row" : "column"}
+          alignItems={matches ? "center" : "flex-end"}
+          style={{ height: "700px", padding: "2em" }}
         >
           <Grid
             item
@@ -26,11 +26,14 @@ const Homepage = () => {
             lg={4}
             color={"primary"}
             style={{
-              marginRight: matches ? "6rem" : 0,
-              marginTop: matches ? "4rem" : 0,
+              marginRight: matches ? "0" : "6rem",
+              marginTop: matches ? "0" : "4rem",
             }}
           >
-            <div className="hero--text">
+            <div
+              className="hero--text"
+              style={{ color: matches ? "#e9e9e9" : "#232323" }}
+            >
               <Typography variant="h1">ASSIX! </Typography>
               <Typography variant="subtitle1">TALLER DE SERIGRAFÍA</Typography>
               <Typography variant={matches ? "body1" : "subtitle2"}>

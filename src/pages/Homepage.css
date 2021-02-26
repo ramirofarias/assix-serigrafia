@@ -1,4 +1,4 @@
-@media (min-width: 300px) {
+@media (max-width: 768px) and (orientation: portrait) {
   .wrapper {
     background: url("./img/responsiveBg.svg") no-repeat;
     background-size: cover;
@@ -11,8 +11,19 @@
     text-align: center;
   }
 }
+@media (min-width: 768px) and (orientation: landscape) {
+  .wrapper {
+    background: url("./img/mdBg.svg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    color: #232323;
+  }
+}
 
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   .wrapper {
     background: url("./img/bg.svg") no-repeat;
     background-size: cover;
