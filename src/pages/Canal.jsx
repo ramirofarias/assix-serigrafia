@@ -35,9 +35,15 @@ const Canal = () => {
       justify="center"
       alignItems="center"
       spacing={5}
-      style={{ height: "100%", padding: "3em 0" }}
+      style={{ height: "100%", padding: "3em " }}
     >
-      <Grid container direction="column" alignItems="center">
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        spacing={3}
+        style={{ marginBottom: "1em" }}
+      >
         <Grid item>
           <Typography variant="h2" style={{ color: "#232323" }}>
             El canal

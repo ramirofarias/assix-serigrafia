@@ -22,7 +22,13 @@ const Comunidad = () => {
       alignItems="center"
       style={{ height: "100%", padding: "3rem", backgroundColor: "#e9e9e9" }}
     >
-      <Grid container direction="column" justify="center" alignItems="center">
+      <Grid
+        container
+        direction="column"
+        justify="center"
+        alignItems="center"
+        spacing={3}
+      >
         <Grid item>
           <Typography variant="h2" style={{ color: "#232323" }}>
             COMUNIDAD

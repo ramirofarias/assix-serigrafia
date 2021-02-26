@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Typography, useMediaQuery, useTheme } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
 import assixLogo from "../pages/img/logo.png";
@@ -10,7 +10,6 @@ const NavbarContainer = styled.div`
   padding: 1em 1.5em;
   background-color: transparent;
   justify-content: space-between;
-  margin-bottom: 3em;
   align-items: center;
 `;
 
@@ -52,6 +51,8 @@ const Link = styled.a`
 `;
 
 const Navbar = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <NavbarContainer>
       <LogoContainer>
@@ -60,7 +61,11 @@ const Navbar = () => {
         </Logo>
       </LogoContainer>
       <LinksContainer>
-        <LinksWrapper>
+        <LinksWrapper
+          style={{
+            marginRight: matches ? "6rem" : 0,
+          }}
+        >
           <LinkItem>
             <Link href="#">
               <Typography variant="subtitle2">El canal</Typography>

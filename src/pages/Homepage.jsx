@@ -1,6 +1,5 @@
 import HeroButton from "../components/HeroButton";
 import React from "react";
-import styled from "styled-components";
 import "./Homepage.css";
 import { Grid, Typography, useMediaQuery, useTheme } from "@material-ui/core";
 import Navbar from "../components/Navbar";
@@ -17,7 +16,7 @@ const Homepage = () => {
           container
           direction={matches ? "column" : "row"}
           alignItems={matches ? "flex-end" : "center"}
-          style={{ height: "100vh" }}
+          style={{ height: "100vh", padding: "2em" }}
         >
           <Grid
             item
@@ -26,6 +25,10 @@ const Homepage = () => {
             md={4}
             lg={4}
             color={"primary"}
+            style={{
+              marginRight: matches ? "6rem" : 0,
+              marginTop: matches ? "4rem" : 0,
+            }}
           >
             <div className="hero--text">
               <Typography variant="h1">ASSIX! </Typography>
