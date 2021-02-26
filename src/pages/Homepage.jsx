@@ -5,17 +5,6 @@ import "./Homepage.css";
 import { Grid, Typography, useMediaQuery, useTheme } from "@material-ui/core";
 import Navbar from "../components/Navbar";
 
-const Titulo = styled.h1`
-  font-size: 2.5em;
-  font-weight: bold;
-  font-style: italic;
-`;
-
-const Texto = styled.p`
-  font-size: 1.5em;
-  font-weight: lighter;
-`;
-
 const Homepage = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
