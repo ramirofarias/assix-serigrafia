@@ -27,11 +27,17 @@ const Homepage = () => {
         <Grid
           container
           direction={matches ? "column" : "row"}
-          justify="center"
           alignItems={matches ? "flex-end" : "center"}
           style={{ height: "100vh" }}
         >
-          <Grid item className="hero--wrapper" xs={12} color={"primary"}>
+          <Grid
+            item
+            className="hero--wrapper"
+            xs={12}
+            md={4}
+            lg={4}
+            color={"primary"}
+          >
             <div className="hero--text">
               <Typography variant="h1">ASSIX! </Typography>
               <Typography variant="subtitle1">TALLER DE SERIGRAFÍA</Typography>

@@ -13,28 +13,29 @@ const Canal = () => {
   const [viewCount, setViewCount] = useState(0);
 
   useEffect(() => {
-    // const fetchSubs = async () => {
-    //   const API_URL = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${YOUTUBE_API}`;
-    //   const response = await fetch(API_URL);
-    //   const data = await response.json();
-    //   const subs = parseInt(data.items[0].statistics.subscriberCount);
-    //   const views = parseInt(data.items[0].statistics.viewCount);
-    //   const videos = parseInt(data.items[0].statistics.videoCount);
-    //   setVideosCount(videos);
-    //   setViewCount(views);
-    //   setSubscriberCount(subs);
-    // };
-    // fetchSubs();
+    const fetchSubs = async () => {
+      const API_URL = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${YOUTUBE_API}`;
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      const subs = parseInt(data.items[0].statistics.subscriberCount);
+      const views = parseInt(data.items[0].statistics.viewCount);
+      const videos = parseInt(data.items[0].statistics.videoCount);
+      setVideosCount(videos);
+      setViewCount(views);
+      setSubscriberCount(subs);
+    };
+    fetchSubs();
   }, []);
 
   return (
     <Grid
       container
+      className="canal--wrapper"
       direction="row"
       justify="center"
       alignItems="center"
       spacing={5}
-      style={{ backgroundColor: "#e9e9e9", padding: "3em 0" }}
+      style={{ height: "100%", padding: "3em 0" }}
     >
       <Grid container direction="column" alignItems="center">
         <Grid item>
@@ -58,8 +59,8 @@ const Canal = () => {
           className="card"
         >
           <CardContent>
-            <Typography variant="h2">
-              {/* <CountUp end={subscriberCount} duration={4} /> */}
+            <Typography variant="h2" style={{ fontStyle: "normal" }}>
+              <CountUp end={subscriberCount} duration={4} />
             </Typography>
             <Typography variant="body2">suscriptores</Typography>
           </CardContent>
@@ -72,8 +73,8 @@ const Canal = () => {
           className="card"
         >
           <CardContent>
-            <Typography variant="h2">
-              {/* <CountUp end={videoCount} duration={4} /> */}
+            <Typography variant="h2" style={{ fontStyle: "normal" }}>
+              <CountUp end={videoCount} duration={4} />
             </Typography>
             <Typography variant="body2">videos</Typography>
           </CardContent>
@@ -86,8 +87,8 @@ const Canal = () => {
           className="card"
         >
           <CardContent>
-            <Typography variant="h2">
-              {/* <CountUp end={viewCount} duration={4} /> */}
+            <Typography variant="h2" style={{ fontStyle: "normal" }}>
+              <CountUp end={viewCount} duration={4} />
             </Typography>
             <Typography variant="body2">visualizaciones</Typography>
           </CardContent>

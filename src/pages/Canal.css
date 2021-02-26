@@ -3,9 +3,12 @@ h2 {
   text-align: center;
 }
 
+.canal--wrapper {
+  background: url("./img/canalBg.svg") no-repeat;
+  background-size: cover;
+}
+
 .card {
-  margin-left: 1em;
-  margin-right: 1em;
   width: 300px;
-  height: 400px;
+  height: 300px;
 }

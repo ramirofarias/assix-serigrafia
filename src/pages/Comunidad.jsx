@@ -12,19 +12,12 @@ import "./Comunidad.css";
 import Telegram from "./img/telegram.png";
 import Facebook from "./img/facebook.png";
 import Instagram from "./img/instagram.png";
-const Titulo = styled.h2`
-  color: #232323;
-`;
-const Texto = styled.li`
-  color: #232323;
-  font-weight: regular;
-  list-style-type: none;
-`;
 
 const Comunidad = () => {
   return (
     <Grid
       container
+      className="comunidad--wrapper"
       direction="row"
       alignItems="center"
       style={{ height: "100%", padding: "3rem", backgroundColor: "#e9e9e9" }}
@@ -53,46 +46,64 @@ const Comunidad = () => {
         style={{ marginTop: "1em" }}
       >
         <Grid item>
-          <Card style={{ backgroundColor: "#232323" }} className="card">
-            <CardMedia
-              component="img"
-              alt="Canal de Telegram"
-              height="200"
-              image={Telegram}
-              title="Canal de Telegram"
-            />
-            <CardContent>
-              <Typography variant="body2">Canal de Telegram</Typography>
-            </CardContent>
-          </Card>
+          <CardActionArea
+            href="https://t.me/CompartiendoSerigrafia"
+            target="_blank"
+            noreferrer
+          >
+            <Card style={{ backgroundColor: "#232323" }} className="card">
+              <CardMedia
+                component="img"
+                alt="Canal de Telegram"
+                height="200"
+                image={Telegram}
+                title="Canal de Telegram"
+              />
+              <CardContent>
+                <Typography variant="body2">Canal de Telegram</Typography>
+              </CardContent>
+            </Card>
+          </CardActionArea>
         </Grid>
         <Grid item>
-          <Card style={{ backgroundColor: "#232323" }} className="card">
-            <CardMedia
-              component="img"
-              alt="Grupo de Facebook"
-              height="200"
-              image={Facebook}
-              title="Grupo de Facebook"
-            />
-            <CardContent>
-              <Typography variant="body2">Grupo de Facebook</Typography>
-            </CardContent>
-          </Card>
+          <CardActionArea
+            href="https://www.facebook.com/groups/CompartiendoSerigrafia"
+            target="_blank"
+            noreferrer
+          >
+            <Card style={{ backgroundColor: "#232323" }} className="card">
+              <CardMedia
+                component="img"
+                alt="Grupo de Facebook"
+                height="200"
+                image={Facebook}
+                title="Grupo de Facebook"
+              />
+              <CardContent>
+                <Typography variant="body2">Grupo de Facebook</Typography>
+              </CardContent>
+            </Card>
+          </CardActionArea>
         </Grid>
         <Grid item>
-          <Card style={{ backgroundColor: "#232323" }} className="card">
-            <CardMedia
-              component="img"
-              alt="Perfil en Instagram"
-              height="200"
-              image={Instagram}
-              title="Perfil en Instagram"
-            />
-            <CardContent>
-              <Typography variant="body2">Perfil en Instagram</Typography>
-            </CardContent>
-          </Card>
+          <CardActionArea
+            href="http://www.instagram.com/assixtaller"
+            target="_blank"
+            noreferrer
+          >
+            <Card style={{ backgroundColor: "#232323" }} className="card">
+              <CardMedia
+                component="img"
+                alt="Perfil en Instagram"
+                height="200"
+                image={Instagram}
+                title="Perfil en Instagram"
+              />
+              <CardContent>
+                <Typography variant="body2">Perfil en Instagram</Typography>
+              </CardContent>
+            </Card>
+          </CardActionArea>
         </Grid>
       </Grid>
     </Grid>
