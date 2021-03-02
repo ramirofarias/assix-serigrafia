@@ -43,15 +43,33 @@ const LinksWrapper = styled.ul`
 
 const LinkItem = styled.li`
   height: 100%;
+  width: auto;
   margin: 1em;
 `;
 
 const Link = styled.a`
   text-decoration: none;
   color: inherit;
+  position: relative;
 
-  &:hover {
-    font-weight: bolder;
+  :before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  :hover {
+    ::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
   }
 `;
 

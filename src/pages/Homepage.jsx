@@ -13,26 +13,34 @@ const Homepage = () => {
       <Navbar />
       <div className="hero">
         <Grid
+          className="hero--grid"
           container
           direction={matches ? "row" : "column"}
           alignItems={matches ? "center" : "flex-end"}
-          style={{ height: "700px", padding: "2em" }}
+          style={{
+            height: "700px",
+            padding: "2em",
+          }}
         >
           <Grid
             item
             className="hero--wrapper"
+            justify={matches ? "flex-end" : "center"}
             xs={12}
             md={4}
             lg={4}
             color={"primary"}
             style={{
-              marginRight: matches ? "0" : "6rem",
-              marginTop: matches ? "0" : "4rem",
+              marginRight: matches ? "0" : "4rem",
+              marginTop: matches ? "3rem" : "4rem",
             }}
           >
             <div
               className="hero--text"
-              style={{ color: matches ? "#e9e9e9" : "#232323" }}
+              style={{
+                color: matches ? "#e9e9e9" : "#232323",
+                fontSize: matches ? "1em" : "4em",
+              }}
             >
               <Typography variant="h1">ASSIX! </Typography>
               <Typography variant="subtitle1">TALLER DE SERIGRAFÍA</Typography>

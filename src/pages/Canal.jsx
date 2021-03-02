@@ -31,11 +31,11 @@ const Canal = () => {
     <Grid
       container
       className="canal--wrapper"
-      direction="row"
-      justify="center"
+      direction="column"
+      justify="flex-start"
       alignItems="center"
       spacing={5}
-      style={{ padding: "3em " }}
+      style={{ padding: "3em" }}
     >
       <Grid
         container
@@ -58,47 +58,55 @@ const Canal = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid item>
-        <Card
-          style={{ backgroundColor: "#232323" }}
-          id="subscriberCount"
-          className="card"
-        >
-          <CardContent>
-            <Typography variant="h2" style={{ fontStyle: "normal" }}>
-              <CountUp end={subscriberCount} duration={4} />
-            </Typography>
-            <Typography variant="body2">suscriptores</Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item>
-        <Card
-          style={{ backgroundColor: "#232323" }}
-          id="videosCount"
-          className="card"
-        >
-          <CardContent>
-            <Typography variant="h2" style={{ fontStyle: "normal" }}>
-              <CountUp end={videoCount} duration={4} />
-            </Typography>
-            <Typography variant="body2">videos</Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item>
-        <Card
-          style={{ backgroundColor: "#232323" }}
-          id="viewsCount"
-          className="card"
-        >
-          <CardContent>
-            <Typography variant="h2" style={{ fontStyle: "normal" }}>
-              <CountUp end={viewCount} duration={4} />
-            </Typography>
-            <Typography variant="body2">visualizaciones</Typography>
-          </CardContent>
-        </Card>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        spacing={5}
+        style={{ marginBottom: "3em" }}
+      >
+        <Grid item>
+          <Card
+            style={{ backgroundColor: "#232323" }}
+            id="subscriberCount"
+            className="card"
+          >
+            <CardContent>
+              <Typography variant="h2" style={{ fontStyle: "normal" }}>
+                <CountUp end={subscriberCount} duration={4} />
+              </Typography>
+              <Typography variant="body2">suscriptores</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card
+            style={{ backgroundColor: "#232323" }}
+            id="videosCount"
+            className="card"
+          >
+            <CardContent>
+              <Typography variant="h2" style={{ fontStyle: "normal" }}>
+                <CountUp end={videoCount} duration={4} />
+              </Typography>
+              <Typography variant="body2">videos</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card
+            style={{ backgroundColor: "#232323" }}
+            id="viewsCount"
+            className="card"
+          >
+            <CardContent>
+              <Typography variant="h2" style={{ fontStyle: "normal" }}>
+                <CountUp end={viewCount} duration={4} />
+              </Typography>
+              <Typography variant="body2">visualizaciones</Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
     </Grid>
   );

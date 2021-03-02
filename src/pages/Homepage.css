@@ -1,8 +1,9 @@
-@media (max-width: 768px) and (orientation: portrait) {
+@media (orientation: portrait) {
   .wrapper {
     background: url("./img/responsiveBg.svg") no-repeat;
     background-size: cover;
     width: 100%;
+    height: 900px;
   }
   .hero--wrapper {
     align-items: flex-start;
@@ -20,6 +21,14 @@
     margin: 0;
     font-size: 1em;
     color: #232323;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+  .hero--grid {
+    align-items: flex-end !important;
+    margin-bottom: 0 !important;
+    margin-top: 5rem !important;
   }
 }
 
