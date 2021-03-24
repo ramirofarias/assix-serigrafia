@@ -10,16 +10,17 @@ const NavbarContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   background-color: transparent;
   align-items: center;
-  padding: 1rem;
 `;
 
 const LogoContainer = styled.div`
   display: flex;
+  margin-left: 1em;
 `;
 
 const Logo = styled.div`
   width: 70px;
   height: 70px;
+  padding: 0.5em;
   img {
     width: 100%;
     height: 100%;
@@ -29,7 +30,7 @@ const Logo = styled.div`
 const LinksContainer = styled.div`
   display: flex;
   align-items: center;
-  align-self: flex-end;
+  align-self: center;
   grid-column: 8/12; ;
 `;
 
@@ -44,7 +45,7 @@ const LinksWrapper = styled.ul`
 const LinkItem = styled.li`
   height: 100%;
   width: auto;
-  margin: 1em;
+  margin-right: 2em;
 `;
 
 const Link = styled.a`

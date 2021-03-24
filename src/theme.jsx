@@ -10,25 +10,29 @@ export let theme = createMuiTheme({
 
     h2: {
       fontStyle: "italic",
+      color: "primary",
+    },
+
+    h3: {
+      fontStyle: "italic",
+      color: "#232323",
+      fontSize: "3.5rem",
     },
 
     subtitle1: {
       color: "primary",
       fontSize: "3rem",
-      fontWeight: "lighter",
       fontStyle: "italic",
     },
 
     subtitle2: {
       fontFamily: "Raleway",
       fontSize: "1.5rem",
-      fontWeight: "lighter",
     },
 
     body1: {
       fontFamily: "Raleway",
-      fontWeight: "lighter",
-      fontSize: "1.5rem",
+      fontSize: "1.8rem",
     },
 
     body2: {

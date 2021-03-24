@@ -18,10 +18,14 @@ const HeroButton = () => {
       <Button
         color="primary"
         variant="contained"
+        className="hero--button"
         startIcon={<PlayArrowIcon style={{ fontSize: 50 }} />}
-        style={{ padding: "0rem 1.5rem", marginTop: "1.5rem" }}
+        style={{ padding: "0rem 1.5rem 0 .5rem", marginTop: "1.5rem" }}
       >
-        <Typography variant="body2" style={{ fontStyle: "normal" }}>
+        <Typography
+          variant="subtitle1"
+          style={{ fontStyle: "normal", fontSize: "2.3rem" }}
+        >
           Suscribite
         </Typography>
       </Button>
