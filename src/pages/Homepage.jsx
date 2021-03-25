@@ -10,7 +10,6 @@ const Homepage = () => {
 
   return (
     <div className="wrapper">
-      <Navbar />
       <div className="hero">
         <div className="hero--wrapper">
           <div className="hero--text">

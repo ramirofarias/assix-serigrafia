@@ -29,6 +29,7 @@ const Canal = () => {
 
   return (
     <Grid
+      id="canal"
       container
       className="canal--wrapper"
       direction="column"

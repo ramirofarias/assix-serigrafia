@@ -5,14 +5,19 @@ import Homepage from "./pages/Homepage";
 import Canal from "./pages/Canal";
 import UltimosVideos from "./pages/UltimosVideos";
 import Comunidad from "./pages/Comunidad";
+import { HashRouter as Router } from "react-router-dom";
+import Navbar from "components/Navbar";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Homepage />
-      <Canal />
-      <UltimosVideos />
-      <Comunidad />
+      <Router hashType="noslash">
+        <Navbar />
+        <Homepage />
+        <Canal />
+        <UltimosVideos />
+        <Comunidad />
+      </Router>
     </ThemeProvider>
   );
 };

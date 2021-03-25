@@ -2,8 +2,10 @@ import { Typography, useMediaQuery, useTheme } from "@material-ui/core";
 import React from "react";
 import styled from "styled-components";
 import assixLogo from "../pages/img/logo.png";
+import { Link as LinkR } from "react-router-dom";
 
 const NavbarContainer = styled.div`
+  position: absolute;
   width: 100%;
   height: 60px;
   display: grid;
@@ -48,7 +50,7 @@ const LinkItem = styled.li`
   margin-right: 2em;
 `;
 
-const Link = styled.a`
+const Link = styled(LinkR)`
   text-decoration: none;
   color: inherit;
   position: relative;
@@ -91,17 +93,17 @@ const Navbar = () => {
           }}
         >
           <LinkItem>
-            <Link href="#">
+            <Link to="canal">
               <Typography variant="subtitle2">El canal</Typography>
             </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="#">
+            <Link to="videos">
               <Typography variant="subtitle2">Últimos videos</Typography>
             </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="#">
+            <Link to="comunidad">
               <Typography variant="subtitle2">Comunidad</Typography>
             </Link>
           </LinkItem>

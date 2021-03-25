@@ -16,6 +16,7 @@ import Instagram from "./img/instagram.png";
 const Comunidad = () => {
   return (
     <Grid
+      id="comunidad"
       container
       className="comunidad--wrapper"
       direction="row"

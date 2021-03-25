@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   color: #232323;
-  height: 700px;
+  height: 100vh;
 }
 
 .hero--wrapper {
@@ -40,7 +40,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     color: #232323;
-    height: 500px;
+    height: 100vh;
   }
 
   .hero--wrapper {
