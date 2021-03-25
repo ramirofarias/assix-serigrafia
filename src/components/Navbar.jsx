@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import assixLogo from "../pages/img/logo.png";
 import { Link as LinkR } from "react-router-dom";
+import { BiMenuAltRight } from "react-icons/bi";
 
 const NavbarContainer = styled.div`
   position: absolute;
@@ -20,9 +21,9 @@ const LogoContainer = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 70px;
-  height: 70px;
-  padding: 0.5em;
+  width: 50px;
+  height: 50px;
+  padding: 1em;
   img {
     width: 100%;
     height: 100%;
@@ -42,6 +43,10 @@ const LinksWrapper = styled.ul`
   display: flex;
   height: 100%;
   list-style: none;
+
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
 `;
 
 const LinkItem = styled.li`
@@ -55,28 +60,27 @@ const Link = styled(LinkR)`
   color: inherit;
   position: relative;
 
-  :before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
+  &.active{
+    border-bottom: 3px solid black;
+  }
   }
 
-  :hover {
-    ::before {
-      visibility: visible;
-      transform: scaleX(1);
-    }
+`;
+
+const MenuButton = styled.div`
+  display: none;
+  @media screen and (orientation: portrait) {
+    display: block;
+    grid-column: 11/12;
+    color: #e9e9e9;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    cursor: pointer;
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
   return (
@@ -86,6 +90,9 @@ const Navbar = () => {
           <img src={assixLogo} alt="Logo del canal"></img>
         </Logo>
       </LogoContainer>
+      <MenuButton onClick={toggle}>
+        <BiMenuAltRight />
+      </MenuButton>
       <LinksContainer>
         <LinksWrapper
           style={{
