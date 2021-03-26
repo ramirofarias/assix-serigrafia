@@ -75,7 +75,7 @@ const Canal = () => {
       >
         <Grid item>
           <Card
-            style={{ backgroundColor: "#232323" }}
+            style={{ backgroundColor: "#232323", height: "max-content" }}
             id="subscriberCount"
             className="card"
           >
@@ -89,7 +89,7 @@ const Canal = () => {
         </Grid>
         <Grid item>
           <Card
-            style={{ backgroundColor: "#232323" }}
+            style={{ backgroundColor: "#232323", height: "max-content" }}
             id="videosCount"
             className="card"
           >
@@ -103,7 +103,7 @@ const Canal = () => {
         </Grid>
         <Grid item>
           <Card
-            style={{ backgroundColor: "#232323" }}
+            style={{ backgroundColor: "#232323", height: "max-content" }}
             id="viewsCount"
             className="card"
           >
