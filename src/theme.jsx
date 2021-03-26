@@ -2,7 +2,7 @@ import { createMuiTheme, responsiveFontSizes } from "@material-ui/core";
 
 export let theme = createMuiTheme({
   typography: {
-    fontFamily: "Bebas Kai",
+    fontFamily: "Bebas Kai, sans-serif",
     h1: {
       fontFamily: "Bebas Kai",
       fontStyle: "italic",
