@@ -16,10 +16,10 @@ const Homepage = () => {
             <Typography variant="h1">ASSIX! </Typography>
             <Typography variant="h3">TALLER DE SERIGRAFÍA</Typography>
             <Typography variant="body1">
-              Aprende estampado textil con videotutoriales en español.
+              Aprendé estampado textil con videotutoriales en español.
             </Typography>
             <Typography variant="body1">
-              Resuelve todas tus dudas en nuestra comunidad.
+              Resolvé todas tus dudas en nuestra comunidad.
             </Typography>
           </div>
 

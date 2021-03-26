@@ -45,17 +45,24 @@ const Canal = () => {
         spacing={3}
         style={{ marginBottom: "1em" }}
       >
-        <Grid item>
+        <Grid
+          item
+          style={{
+            display: "grid",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <Typography variant="h2" style={{ color: "#232323" }}>
             El canal
           </Typography>
         </Grid>
         <Grid item lg={6}>
           <Typography variant="subtitle2" style={{ textAlign: "center" }}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
-            ex debitis quidem ipsa ad at commodi accusantium id quisquam, alias
-            doloremque odit recusandae ea delectus soluta iure labore?
-            Dignissimos, laudantium.
+            Creado en 2016, el canal está orientado a resolver todas tus dudas
+            sobre serigrafía. Podrás encontrar tutoriales, Q&A, y muchas cosas
+            más para que puedas convertir tus diseños en realidad. ¡Suscribite y
+            activá la campanita para no perderte de ningún video!
           </Typography>
         </Grid>
       </Grid>
