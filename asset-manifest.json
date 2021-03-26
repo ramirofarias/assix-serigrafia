@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/assix-serigrafia/static/css/main.f044c8cf.chunk.css",
-    "main.js": "/assix-serigrafia/static/js/main.317c17f1.chunk.js",
-    "main.js.map": "/assix-serigrafia/static/js/main.317c17f1.chunk.js.map",
+    "main.css": "/assix-serigrafia/static/css/main.6c5eb955.chunk.css",
+    "main.js": "/assix-serigrafia/static/js/main.efa3e89c.chunk.js",
+    "main.js.map": "/assix-serigrafia/static/js/main.efa3e89c.chunk.js.map",
     "runtime-main.js": "/assix-serigrafia/static/js/runtime-main.c34bf91a.js",
     "runtime-main.js.map": "/assix-serigrafia/static/js/runtime-main.c34bf91a.js.map",
     "static/js/2.01d02d9c.chunk.js": "/assix-serigrafia/static/js/2.01d02d9c.chunk.js",
     "static/js/2.01d02d9c.chunk.js.map": "/assix-serigrafia/static/js/2.01d02d9c.chunk.js.map",
     "index.html": "/assix-serigrafia/index.html",
-    "static/css/main.f044c8cf.chunk.css.map": "/assix-serigrafia/static/css/main.f044c8cf.chunk.css.map",
+    "static/css/main.6c5eb955.chunk.css.map": "/assix-serigrafia/static/css/main.6c5eb955.chunk.css.map",
     "static/js/2.01d02d9c.chunk.js.LICENSE.txt": "/assix-serigrafia/static/js/2.01d02d9c.chunk.js.LICENSE.txt",
     "static/media/Homepage.css": "/assix-serigrafia/static/media/responsiveBg.97a07592.svg",
     "static/media/Canal.css": "/assix-serigrafia/static/media/canalBg.bb554ced.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.c34bf91a.js",
     "static/js/2.01d02d9c.chunk.js",
-    "static/css/main.f044c8cf.chunk.css",
-    "static/js/main.317c17f1.chunk.js"
+    "static/css/main.6c5eb955.chunk.css",
+    "static/js/main.efa3e89c.chunk.js"
   ]
 }
