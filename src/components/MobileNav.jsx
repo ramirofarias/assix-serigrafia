@@ -45,11 +45,11 @@ const Link = styled(LinkR)`
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
-  color: white;
+  color: #e9e9e9;
   cursor: pointer;
 
   &:hover {
-    color: red;
+    color: white;
     transition: 0.2s ease-in-out;
   }
 `;
@@ -59,7 +59,7 @@ const MobileNav = ({ isOpen, toggle }) => {
       <CloseButton onClick={toggle}>
         <FaTimes />
       </CloseButton>
-      <Menu>
+      <Menu onClick={toggle}>
         <Link to="canal">
           <Typography variant="h1">El Canal</Typography>
         </Link>
