@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/assix-serigrafia/static/css/main.f044c8cf.chunk.css",
+    "main.js": "/assix-serigrafia/static/js/main.206938c4.chunk.js",
+    "main.js.map": "/assix-serigrafia/static/js/main.206938c4.chunk.js.map",
+    "runtime-main.js": "/assix-serigrafia/static/js/runtime-main.c34bf91a.js",
+    "runtime-main.js.map": "/assix-serigrafia/static/js/runtime-main.c34bf91a.js.map",
+    "static/js/2.01d02d9c.chunk.js": "/assix-serigrafia/static/js/2.01d02d9c.chunk.js",
+    "static/js/2.01d02d9c.chunk.js.map": "/assix-serigrafia/static/js/2.01d02d9c.chunk.js.map",
+    "index.html": "/assix-serigrafia/index.html",
+    "static/css/main.f044c8cf.chunk.css.map": "/assix-serigrafia/static/css/main.f044c8cf.chunk.css.map",
+    "static/js/2.01d02d9c.chunk.js.LICENSE.txt": "/assix-serigrafia/static/js/2.01d02d9c.chunk.js.LICENSE.txt",
+    "static/media/Homepage.css": "/assix-serigrafia/static/media/responsiveBg.97a07592.svg",
+    "static/media/Canal.css": "/assix-serigrafia/static/media/canalBg.bb554ced.svg",
+    "static/media/Comunidad.css": "/assix-serigrafia/static/media/comunidadBg.e5766473.svg",
+    "static/media/UltimosVideos.css": "/assix-serigrafia/static/media/videosBg.44ee1775.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c34bf91a.js",
+    "static/js/2.01d02d9c.chunk.js",
+    "static/css/main.f044c8cf.chunk.css",
+    "static/js/main.206938c4.chunk.js"
+  ]
+}
